@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.KopButton = new System.Windows.Forms.Button();
             this.KasaLabel = new System.Windows.Forms.Label();
+            this.GowniakiLabel = new System.Windows.Forms.Label();
+            this.DokupGowniakiButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // KopButton
             // 
             this.KopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.KopButton.Location = new System.Drawing.Point(299, 154);
+            this.KopButton.Location = new System.Drawing.Point(565, 319);
             this.KopButton.Name = "KopButton";
             this.KopButton.Size = new System.Drawing.Size(223, 119);
             this.KopButton.TabIndex = 0;
@@ -53,11 +57,39 @@
             this.KasaLabel.TabIndex = 1;
             this.KasaLabel.Text = "Kasa: 0";
             // 
+            // GowniakiLabel
+            // 
+            this.GowniakiLabel.AutoSize = true;
+            this.GowniakiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GowniakiLabel.Location = new System.Drawing.Point(12, 9);
+            this.GowniakiLabel.Name = "GowniakiLabel";
+            this.GowniakiLabel.Size = new System.Drawing.Size(156, 31);
+            this.GowniakiLabel.TabIndex = 2;
+            this.GowniakiLabel.Text = "Gówniaki: 0";
+            // 
+            // DokupGowniakiButton
+            // 
+            this.DokupGowniakiButton.Location = new System.Drawing.Point(18, 44);
+            this.DokupGowniakiButton.Name = "DokupGowniakiButton";
+            this.DokupGowniakiButton.Size = new System.Drawing.Size(150, 27);
+            this.DokupGowniakiButton.TabIndex = 3;
+            this.DokupGowniakiButton.Text = "Dokup";
+            this.DokupGowniakiButton.UseVisualStyleBackColor = true;
+            this.DokupGowniakiButton.Click += new System.EventHandler(this.DokupGowniakiButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DokupGowniakiButton);
+            this.Controls.Add(this.GowniakiLabel);
             this.Controls.Add(this.KasaLabel);
             this.Controls.Add(this.KopButton);
             this.Name = "Form1";
@@ -71,6 +103,9 @@
 
         private System.Windows.Forms.Button KopButton;
         private System.Windows.Forms.Label KasaLabel;
+        private System.Windows.Forms.Label GowniakiLabel;
+        private System.Windows.Forms.Button DokupGowniakiButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
