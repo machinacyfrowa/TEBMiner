@@ -24,7 +24,7 @@ namespace TEBMiner
         private void Kop(object sender, EventArgs e)
         {
             kasa++;
-            updateLabels();
+            UpdateLabels();
         }
 
         private void DokupGowniakiButton_Click(object sender, EventArgs e)
@@ -33,21 +33,19 @@ namespace TEBMiner
             {
                 gowniaki++;
                 kasa -= 10;
-                updateLabels();
+                UpdateLabels();
             }
-            
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             kasa += 1 * gowniaki;
-            updateLabels();
+            UpdateLabels();
         }
-        private void updateLabels()
+        private void UpdateLabels()
         {
             GowniakiLabel.Text = "Gówniaki: " + gowniaki.ToString();
             KasaLabel.Text = "Kasa: " + kasa.ToString() + " zł";
-
         }
     }
 }

@@ -33,7 +33,7 @@
             this.KasaLabel = new System.Windows.Forms.Label();
             this.GowniakiLabel = new System.Windows.Forms.Label();
             this.DokupGowniakiButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // KopButton
@@ -77,11 +77,11 @@
             this.DokupGowniakiButton.UseVisualStyleBackColor = true;
             this.DokupGowniakiButton.Click += new System.EventHandler(this.DokupGowniakiButton_Click);
             // 
-            // timer1
+            // Timer
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // Form1
             // 
@@ -105,7 +105,7 @@
         private System.Windows.Forms.Label KasaLabel;
         private System.Windows.Forms.Label GowniakiLabel;
         private System.Windows.Forms.Button DokupGowniakiButton;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 
